@@ -96,12 +96,12 @@ node_modules/
 *.cache
 
 # --- Model artifacts & datasets ---
-data/
-datasets/
-models/
-*.csv
-*.tsv
-*.jsonl
-*.xlsx
-*.npy
-*.npz
+# data/
+# datasets/
+# models/
+# *.csv
+# *.tsv
+# *.jsonl
+# *.xlsx
+# *.npy
+# *.npz
