@@ -8,6 +8,7 @@ import json
 import logging
 from app.ai.retrain_manager import append_confident_ad, trigger_retrain_if_needed
 from fastapi.middleware.cors import CORSMiddleware
+from typing import Union
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -79,7 +80,7 @@ def predict_ad(data: AdInput):
     
     # 3️⃣ Predict category
     category_id: int | None = None
-    category_name: str | None = None
+    categories_name: Union[str, None] = None
     confidence = None
     
     if model and vectorizer:
@@ -131,7 +132,7 @@ def predict_ad(data: AdInput):
 class TrainingSample(BaseModel):
     description: str
     category_id: int
-    source: str | None = None
+    source: Union[str, None] = None
 
     
 

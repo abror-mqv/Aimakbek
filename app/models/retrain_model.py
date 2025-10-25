@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 import pandas as pd
 from app.models.train_model import train, simple_clean_text
-
+from typing import Union
 
 def compute_hash(text: str) -> str:
     """Возвращает хэш для строки (текста объявления)."""
@@ -69,7 +69,7 @@ def append_new_data(
 
 def retrain_with_new_data(
     new_csv_path: str,
-    categories_path: str | None = None,
+    categories_path: Union[str, None] = None,
     out_dir: str = "data/models",
 ):
     """

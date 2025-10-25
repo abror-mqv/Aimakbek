@@ -74,7 +74,7 @@ def load_categories(path: Union[str, None] = None):
 def train(
     csv_path: str,
     out_dir: str = "data/models",
-    categories_path: str | None = None,
+    categories_path: Union[str, None] = None
     test_size: float = 0.2,
     random_state: int = 42,
     max_features: int = 20000,
