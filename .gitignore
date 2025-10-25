@@ -1,0 +1,107 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+.coverage
+.coverage.*
+.cache/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+htmlcov/
+
+# Type checkers & linters
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Environments
+.env
+.env.*
+.venv
+venv/
+ENV/
+env/
+.conda/
+conda-env/
+__pypackages__/
+.python-version
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and runtime
+*.log
+logs/
+*.pid
+*.pid.lock
+
+# Django/Flask/Starlette artifacts (safe generics)
+instance/
+*.mo
+*.pot
+
+# Databases (local dev)
+*.sqlite3
+*.db
+*.sqlite
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local tooling
+*.local
+
+# Node (if present for tooling)
+node_modules/
+
+# Images/compiled assets (optional caches)
+*.cache
+
+# --- Model artifacts & datasets ---
+data/
+datasets/
+models/
+*.csv
+*.tsv
+*.jsonl
+*.xlsx
+*.npy
+*.npz
