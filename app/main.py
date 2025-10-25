@@ -57,10 +57,10 @@ class AdInput(BaseModel):
 
 
 class AdPrediction(BaseModel):
-    category: int | None
-    category_name: str | None
-    phone: str | None
-    confidence: float | None
+    category: Optional[int]
+    category_name: Optional[str]
+    phone: Optional[str]
+    confidence: Optional[float]
 
 
 class PredictRequest(BaseModel):
