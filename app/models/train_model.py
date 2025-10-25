@@ -52,7 +52,7 @@ def simple_clean_text(text: str) -> str:
     return text
 
 
-def load_categories(path: str | None = None):
+def load_categories(path: Union[str, None] = None):
     """
     Загружает категории. Если path не указан — возвращает DEFAULT_CATEGORIES.
     """
