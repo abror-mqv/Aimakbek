@@ -8,7 +8,7 @@ import json
 import logging
 from app.ai.retrain_manager import append_confident_ad, trigger_retrain_if_needed
 from fastapi.middleware.cors import CORSMiddleware
-from typing import Union
+from typing import Union, Optional, Dict
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -37,8 +37,8 @@ else:
     vectorizer = None
 
 # Load metadata to map predicted label index -> category id -> ru_name
-index_to_id: dict[int, int] | None = None
-id_to_name: dict[int, str] | None = None
+index_to_id: Optional[Dict[int, int]] = None
+id_to_name: Optional[Dict[int, str]] = None
 if os.path.exists(METADATA_PATH):
     try:
         with open(METADATA_PATH, "r", encoding="utf-8") as f:
@@ -79,7 +79,7 @@ def predict_ad(data: AdInput):
     logger.info(f"Preprocessed text: {processed[:100]}...")
     
     # 3️⃣ Predict category
-    category_id: int | None = None
+    category_id: Optional[int] = None
     categories_name: Union[str, None] = None
     confidence = None
     
